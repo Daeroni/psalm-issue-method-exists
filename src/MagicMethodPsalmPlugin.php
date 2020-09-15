@@ -44,16 +44,18 @@ class MagicMethodPsalmPlugin implements MethodExistenceProviderInterface, Method
                 switch ($method_name_lowercase) {
                     case 'my_magic_method':
                         return true;
+                    /**
+                     * What's the difference here?
+                     *
+                     * 3.14.2: UndefinedMethod for undefined methods (good)
+                     * 3.15:   UndefinedMethod for ALL magic methods (bad)
+                     */
+                    case '__call':
+                        return false;
                 }
         }
 
-        /**
-         * What's the difference here?
-         *
-         * 3.14.2: UndefinedMethod for undefined methods (good)
-         * 3.15:   UndefinedMethod for ALL magic methods (bad)
-         */
-        return false;
+        return null;
     }
 
     /**
