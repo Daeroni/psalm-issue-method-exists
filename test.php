@@ -12,4 +12,6 @@ $object = new Test\MagicClass;
  */
 print $object->my_magic_method() . PHP_EOL;
 
+print $object->my_normal_method() . PHP_EOL;
+
 print (string)$object->my_mistyped_undefined_magic_method() . PHP_EOL;
