@@ -1,0 +1,18 @@
+{
+    "name": "mpesari/psalm-method-exists",
+    "authors": [
+        {
+            "name": "mpesari",
+            "email": "mpesari@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Test\\": "src/"
+        }
+    },
+    "require-dev": {
+        "vimeo/psalm": "3.14.2"
+    }
+}
