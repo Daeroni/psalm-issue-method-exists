@@ -1,6 +1,6 @@
 # psalm-issue-method-exists
 
-1. `composer install`
+1. `composer install` # version `3.14.2`
 2. `vendor/bin/psalm test.php`
 ```
 ERROR: UndefinedMethod - test.php:15:24 - Method Test\MagicClass::my_mistyped_undefined_magic_method does not exist (see https://psalm.dev/022)
@@ -11,7 +11,7 @@ print (string)$object->my_mistyped_undefined_magic_method() . PHP_EOL;
 ------------------------------
 ```
 
-3. `composer require vimeo/psalm dev-master#9935f64` (or `3.15`)
+3. `composer require vimeo/psalm dev-master#9935f64` # or `3.15`
 4. `vendor/bin/psalm test.php`
 
 ```
